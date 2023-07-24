@@ -1,0 +1,31 @@
+﻿@using Grupo1MVC.Models.CoreEscuela.Entidades;
+@model CursoModel
+@{
+    ViewData["Title"] = "Crear cursos";
+    Layout = "Simple";
+}
+<div asp-validation-summary="All"></div>
+    <form method="POST">
+
+        <label asp-for="Id"></label>
+        <input asp-for="Id" />
+
+        <label asp-for="Nombre"></label>
+        <input asp-for="Nombre" />
+
+        <label asp-for="Jornada"></label>
+        @Html.DropDownList(
+            "Jornada" , Html.GetEnumSelectList<TiposJornadaModel>(),
+            "Seleccione una Jornada",
+            new {@class = "form-control"}
+        )
+
+        <label asp-for="Dirección"></label>
+        <input asp-for="Dirección" />
+
+        <input type="submit"/>
+
+    </form>
+   
+
+

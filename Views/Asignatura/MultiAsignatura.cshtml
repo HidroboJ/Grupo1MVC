@@ -1,0 +1,42 @@
+﻿@model List<AsignaturaModel>
+@{
+    ViewData["Title"] = "Multi Asignatura";
+    Layout = "Simple";
+}
+
+
+<table class="table table-dark  table-hover">
+    <thead>
+
+        <tr>
+            <th scope="col">
+                Nombre
+            </th>
+            <th scope="col">
+                ID
+            </th>
+            <th scope="col">
+                IDCURSO
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var asignatura in Model)
+        { 
+        <tr>
+            <td>
+               @asignatura.Nombre 
+            </td>
+            <td>
+                @asignatura.Id
+            </td>
+                <td>
+                    @asignatura.CursoId
+                </td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+
+<h2><strong>@ViewBag.DatoDinamico</strong></h2>

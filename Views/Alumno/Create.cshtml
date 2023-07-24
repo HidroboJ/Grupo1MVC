@@ -1,0 +1,25 @@
+﻿@using Grupo1MVC.Models.CoreEscuela.Entidades;
+@model AlumnoModel
+@{
+    ViewData["Title"] = "Crear Alumno";
+    Layout = "Simple";
+}
+
+    <form method="POST">
+
+        <label asp-for="Id"></label>
+        <input asp-for="Id" />
+    <label asp-for="CursoId"></label>
+    <input asp-for="CursoId" />
+
+        <label asp-for="Nombre"></label>
+        <input asp-for="Nombre" />
+
+
+    
+        <input type="submit"/>
+
+    </form>
+   
+
+
